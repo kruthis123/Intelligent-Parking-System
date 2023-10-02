@@ -1,0 +1,17 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Home</title>
+      <link href="{% static 'parking\index.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Welcome to Smart Parking System!</h1>
+        <br>
+        <form action="{ url 'details' plate_number }" method="post">
+            {% csrf_token %}
+            <input type="text" name="plate_number">
+            <input type="submit">
+        </form>
+    </body>
+</html>

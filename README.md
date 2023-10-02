@@ -1,2 +1,4 @@
 # Intelligent-Parking-System
 A smart parking system making use of IoT to automate the process of parking
+
+This project makes use of IoT Technology for tagging vehicles and identifying them. IoT server modules are present in the parking lots and client modules are present inside vehicles. The client modules communicate with the server when they enter into or exit from the parking lot. After receiving the communication, the server takes necessary actions. If a vehicle is entering it carries out the procedures related to parking allotment and saving the record in the database. If a vehicle is exiting, it carries out procedures related to parking spot deallocation and billing etc. The parking spot allocation is done by using proximity sensing principle. By using ultrasonic sensors, we determine empty and filled parking spots and allocate one of the empty parking spots to the vehicle that has entered.

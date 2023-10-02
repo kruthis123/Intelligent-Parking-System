@@ -1,0 +1,28 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Details</title>
+        <link href="{% static 'parking\index.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        License Plate Number: {{ plate_number }} <br>
+        {% if vehicle_type == 2 %} 
+            Vehicle Type: 4-Wheeler
+        {% else %}
+            Vehicle Type: 2-Wheeler
+        {% endif %} <br>
+        Parking slot: {{ parking_spot }} <br>
+        Entry Time: {{ entry_time }} <br>
+        {% if exit_time != null %}
+            Exit Time: {{ exit_time }} <br>
+            Duration: {{ duration }} <br>
+            Amount to be paid: {{ amount }}
+        {% endif %} <br><br>
+        Payment Done <br>
+        <form action="{ url 'details' {{ plate_number }} }" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Yes" name="yes"> 
+        </form>
+    </body>
+</html>
